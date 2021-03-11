@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".maingame">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background">
+
+        <TextView
+            android:id="@+id/txtQues"
+            android:layout_width="312dp"
+            android:layout_height="102dp"
+            android:layout_marginStart="48dp"
+            android:layout_marginLeft="48dp"
+            android:layout_marginTop="76dp"
+            android:background="@android:color/background_light"
+            android:gravity="center"
+            android:text="Câu hỏi"
+            android:textColor="@android:color/background_dark"
+            android:textSize="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnExit" />
+
+        <Button
+            android:id="@+id/btnC"
+            android:layout_width="140dp"
+            android:layout_height="55dp"
+            android:layout_marginStart="49dp"
+            android:layout_marginLeft="49dp"
+            android:layout_marginTop="41dp"
+            android:text="C"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnA" />
+
+        <Button
+            android:id="@+id/btnA"
+            android:layout_width="140dp"
+            android:layout_height="55dp"
+            android:layout_marginStart="49dp"
+            android:layout_marginLeft="49dp"
+            android:layout_marginTop="81dp"
+            android:text="A"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn5050" />
+
+        <Button
+            android:id="@+id/btnB"
+            android:layout_width="140dp"
+            android:layout_height="55dp"
+            android:layout_marginStart="35dp"
+            android:layout_marginLeft="35dp"
+            android:layout_marginTop="81dp"
+            android:text="B"
+            app:layout_constraintStart_toEndOf="@+id/btnA"
+            app:layout_constraintTop_toBottomOf="@+id/btnPhone" />
+
+        <Button
+            android:id="@+id/btn5050"
+            android:layout_width="89dp"
+            android:layout_height="79dp"
+            android:layout_marginStart="48dp"
+            android:layout_marginLeft="48dp"
+            android:layout_marginTop="57dp"
+            android:background="@android:color/holo_blue_dark"
+            android:onClick="troGiup5050"
+            android:text="50/50"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtQues" />
+
+        <Button
+            android:id="@+id/btnPhone"
+            android:layout_width="95dp"
+            android:layout_height="79dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="57dp"
+            android:background="@android:color/holo_blue_dark"
+            android:onClick="troGiupPhone"
+            android:text="Gọi về báo nhà"
+            app:layout_constraintStart_toEndOf="@+id/btnSwitch"
+            app:layout_constraintTop_toBottomOf="@+id/txtQues" />
+
+        <Button
+            android:id="@+id/btnD"
+            android:layout_width="140dp"
+            android:layout_height="55dp"
+            android:layout_marginStart="35dp"
+            android:layout_marginLeft="35dp"
+            android:layout_marginTop="41dp"
+            android:text="D"
+            app:layout_constraintStart_toEndOf="@+id/btnC"
+            app:layout_constraintTop_toBottomOf="@+id/btnB" />
+
+        <Button
+            android:id="@+id/btnExit"
+            android:layout_width="87dp"
+            android:layout_height="56dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="308dp"
+            android:layout_marginRight="308dp"
+            android:onClick="btnThoat"
+            android:text="Thoát"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btnSwitch"
+            android:layout_width="95dp"
+            android:layout_height="78dp"
+            android:layout_marginStart="21dp"
+            android:layout_marginLeft="21dp"
+            android:layout_marginTop="58dp"
+            android:background="@android:color/holo_blue_dark"
+            android:onClick="troGiupSwitch"
+            android:text="Đổi câu hỏi"
+            app:layout_constraintStart_toEndOf="@+id/btn5050"
+            app:layout_constraintTop_toBottomOf="@+id/txtQues" />
+
+        <TextView
+            android:id="@+id/textView18"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="136dp"
+            android:layout_marginLeft="136dp"
+            android:layout_marginTop="104dp"
+            android:text="Câu hỏi"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txtsocauhoi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="104dp"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/textView18"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btndanhsach"
+            android:layout_width="103dp"
+            android:layout_height="53dp"
+            android:layout_marginStart="200dp"
+            android:layout_marginLeft="200dp"
+            android:layout_marginTop="12dp"
+            android:onClick="btnDanhSach"
+            android:text="Mốc tiền thưởng"
+            app:layout_constraintStart_toEndOf="@+id/btnExit"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView23"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginLeft="32dp"
+            android:layout_marginTop="68dp"
+            android:text="C"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView24" />
+
+        <TextView
+            android:id="@+id/textView24"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginLeft="32dp"
+            android:layout_marginTop="413dp"
+            android:text="A"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnExit" />
+
+        <TextView
+            android:id="@+id/textView25"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="19dp"
+            android:layout_marginLeft="19dp"
+            android:layout_marginTop="67dp"
+            android:text="D"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/btnC"
+            app:layout_constraintTop_toBottomOf="@+id/textView26" />
+
+        <TextView
+            android:id="@+id/textView26"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="19dp"
+            android:layout_marginLeft="19dp"
+            android:layout_marginTop="99dp"
+            android:text="B"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/btnA"
+            app:layout_constraintTop_toBottomOf="@+id/btnSwitch" />
+
+        <Button
+            android:id="@+id/btnDungCuocChoi"
+            android:layout_width="107dp"
+            android:layout_height="54dp"
+            android:layout_marginStart="56dp"
+            android:layout_marginLeft="56dp"
+            android:layout_marginTop="12dp"
+            android:onClick="btnDungCuocChoi"
+            android:text="Dừng cuộc chơi"
+            app:layout_constraintStart_toEndOf="@+id/btnExit"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ListView
+        android:id="@+id/lvtienthuong"
+        android:layout_width="271dp"
+        android:layout_height="707dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="0dp"
+        android:background="#BFC4DD"
+        android:cacheColorHint="#3F51B5"
+        android:divider="@null"
+        android:dividerHeight="0dp"
+        android:scrollbarFadeDuration="@android:integer/config_shortAnimTime"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+    </ListView>
+
+</RelativeLayout>
